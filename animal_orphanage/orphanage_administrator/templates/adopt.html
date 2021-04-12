@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form method="post" class="form-grid">
+        {% csrf_token %}
+        <div class="form-item">
+            <label class="form-label" for="{{ form.date_adoption.id_for_label }}">Fecha de adopción</label>
+        </div>
+        <div class="form-item">
+                {{ form.date_adoption }}
+        </div>
+        <div class="form-item">
+            <label class="form-label" for="{{ form.owner.id_for_label }}">Nuevo Dueño</label>
+        </div>
+        <div class="form-item">
+                {{ form.owner }}
+        </div>
+        <div class="wrapper-submit-button">
+            <input type="submit" value="Adoptar">
+        </div>
+    </form>
+{% endblock %}

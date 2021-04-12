@@ -1,0 +1,30 @@
+.data-table{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.data-table td, .data-table th {
+    border: 1px;
+    padding: 1rem;
+}
+
+.data-table th {
+    text-align: left;
+    color: white;
+    background-color: rgb(40, 80, 180);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.data-table tr:nth-child(odd){
+    background-color: rgb(70, 130, 180);
+}
+
+.data-table tr:nth-child(even){
+    background-color: rgb(80, 140, 190);
+}
+
+.data-table tr:hover{
+    background-color: cornflowerblue;
+}

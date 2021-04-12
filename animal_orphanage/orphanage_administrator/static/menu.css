@@ -1,0 +1,47 @@
+.vertical {
+    writing-mode: vertical-rl;
+    text-align: center;
+    color:white;
+    font-size: 20px;
+    padding-left: 1rem;
+    padding-right: 0.5rem;
+}
+
+.side-menu {
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    left: -9rem;
+    background-color: darkcyan;
+    transition: 0.3s;
+}
+
+.side-menu:hover{
+    left: 0;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    row-gap: 2px;
+    column-gap: 2px;
+}
+
+.item {
+    text-align: center;
+    padding: 60% 10%;
+}
+
+.link-text{
+    color:white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.link-text:hover{
+    color:blue;
+}

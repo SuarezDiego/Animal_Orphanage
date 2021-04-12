@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="delete-wrapper">
+        <form method="post">{% csrf_token %}
+            <p>¿Estás seguro de eliminar a "{{ person.name }}"?</p>
+            <input class="delete-buttons" type="submit" value="Sí">
+        </form>
+        <button class="delete-buttons" onclick="location.href = '/person/{{person.id}}'">
+            No
+        </button>
+    </div>
+{% endblock %}

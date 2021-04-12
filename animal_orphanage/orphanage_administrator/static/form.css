@@ -1,0 +1,39 @@
+.form-label{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.form-textarea{
+    resize: none;
+    width: 80%;
+    font-size: large;
+    font-family: Ubuntu;
+}
+
+.form-textinput{
+    width: 80%;
+    font-size: large;
+    font-family: Ubuntu;
+}
+
+.form-grid{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr 0.5fr 0.25fr;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: darkcyan;
+}
+
+.form-item{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 3rem;
+}
+
+.wrapper-submit-button{
+    grid-column: 1 / 3;
+    text-align: center;
+}

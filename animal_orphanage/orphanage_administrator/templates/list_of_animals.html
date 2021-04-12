@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table class="data-table">
+        <tr>
+            <th>Nombre</th>
+            <th>Fecha en que se encontró</th>
+            <th>Adoptado</th>
+            <th>Ficha</th>
+        </tr>
+        {% for animal in animals %}
+        <tr>
+            <td>
+                {{ animal.name }}
+            </td>
+            <td>
+                {{ animal.date_found }}
+            </td>
+            <td>
+                {% if animal.date_adoption == None %}
+                    No
+                {% else %}
+                    {{ animal.date_adoption }}
+                {% endif %}
+            </td>
+            <td>
+                <a href="{% url 'animal_detail' animal.id %}">Ver</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

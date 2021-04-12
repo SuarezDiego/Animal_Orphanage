@@ -1,0 +1,25 @@
+.animal-detail-grid{
+    position: absolute;
+    display: grid;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: darkcyan;
+}
+.animal-detail-picture{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    height: 20rem;
+    padding: 1rem;
+}
+.animal-detail-text{
+    padding: 1rem;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.animal-detail-buttons{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    padding: 1rem;
+    text-align: center;
+}

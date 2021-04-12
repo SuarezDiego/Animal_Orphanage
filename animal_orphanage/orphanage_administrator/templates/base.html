@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/form.css' %}">
+    <link rel="stylesheet" href="{% static '/menu.css' %}">
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <link rel="stylesheet" href="{% static '/table.css' %}">
+    <link rel="stylesheet" href="{% static '/detail_animal.css' %}">
+    <link rel="stylesheet" href="{% static '/detail_person.css' %}">
+    <link rel="stylesheet" href="{% static '/delete.css' %}">
+</head>
+<body>
+    <div class="side-menu">
+        <div class="wrapper">
+            <div class="item">
+                <a class="link-text" href="{% url 'list_of_animals' %}">Animales</a>
+            </div>
+            <div class="item">
+                <a class="link-text" href="{% url 'list_of_persons' %}">Personas</a>
+            </div>
+            <div class="item">
+                <a class="link-text" href="{% url 'add_animal' %}">Agregar<br>Animal</a>
+            </div>
+            <div class="item">
+                <a class="link-text" href="{% url 'add_person' %}">Agregar<br>Persona</a>
+            </div>
+        </div>
+        <div class="vertical">
+            Menu
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>

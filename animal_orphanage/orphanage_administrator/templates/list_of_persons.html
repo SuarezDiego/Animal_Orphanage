@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table class="data-table">
+        <tr>
+            <th>Nombre</th>
+            <th>Rut</th>
+            <th>Maltrata animales</th>
+            <th>Ficha</th>
+        </tr>
+        {% for person in persons %}
+        <tr>
+            <td>
+                {{ person.name }}
+            </td>
+            <td>
+                {{ person.rut }}
+            </td>
+            <td>
+                {% if person.mistreats_animals %}
+                    Sí
+                {% else %}
+                    No
+                {% endif %}
+            </td>
+            <td>
+                <a href="{% url 'person_detail' person.id %}">Ver</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+{% endblock %}
