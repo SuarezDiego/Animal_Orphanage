@@ -8,6 +8,7 @@ TRUE_OR_FALSE_CHOICES = (
     (False, 'No')
 )
 
+
 class PersonForm(ModelForm):
     class Meta:
         model = Person
@@ -19,5 +20,7 @@ class PersonForm(ModelForm):
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-textinput'}),
             'rut': forms.TextInput(attrs={'class': 'form-textinput'}),
-            'mistreats_animals': forms.Select(choices=((True,'Sí'),(False,'No')))
+            'mistreats_animals': forms.Select(
+                choices=((True, 'Sí'), (False, 'No'))
+            )
         }

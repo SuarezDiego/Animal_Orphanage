@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="delete-wrapper">
-        <form method="post">{% csrf_token %}
-            <p>¿Estás seguro de eliminar a "{{ animal.name }}"?</p>
-            <input class="delete-buttons" type="submit" value="Sí">
-        </form>
-        <button class="delete-buttons" onclick="location.href = '/animal/{{animal.id}}'">
-            No
-        </button>
-    </div>
+<div class="delete-wrapper">
+    <form method="post">{% csrf_token %}
+        <p>¿Estás seguro de eliminar a "{{ animal.name }}"?</p>
+        <input class="delete-buttons" type="submit" value="Sí">
+    </form>
+    <button class="delete-buttons" onclick="location.href = '/animal/{{animal.id}}'">
+        No
+    </button>
+</div>
 {% endblock %}

@@ -1,7 +1,7 @@
 .vertical {
     writing-mode: vertical-rl;
     text-align: center;
-    color:white;
+    color: white;
     font-size: 20px;
     padding-left: 1rem;
     padding-right: 0.5rem;
@@ -9,7 +9,7 @@
 
 .side-menu {
     position: absolute;
-    top:0px;
+    top: 0px;
     bottom: 0px;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -20,7 +20,7 @@
     transition: 0.3s;
 }
 
-.side-menu:hover{
+.side-menu:hover {
     left: 0;
 }
 
@@ -37,11 +37,12 @@
     padding: 60% 10%;
 }
 
-.link-text{
-    color:white;
+.link-text {
+    color: white;
     text-decoration: none;
     font-size: 20px;
 }
-.link-text:hover{
-    color:blue;
+
+.link-text:hover {
+    color: blue;
 }

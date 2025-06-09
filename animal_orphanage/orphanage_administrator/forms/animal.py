@@ -21,15 +21,17 @@ class AnimalForm(ModelForm):
             "place_found": forms.TextInput(attrs={'class': 'form-textinput'})
         }
 
+
 class AdoptForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super(AdoptForm, self).__init__(*args, **kwargs)
         self.fields['owner'].queryset = (
             self.fields['owner'].queryset.exclude(mistreats_animals=True)
         )
+
     class Meta:
         model = Animal
-        fields = ['date_adoption','owner']
+        fields = ['date_adoption', 'owner']
         widgets = {
             'date_adoption': forms.NumberInput(attrs={'type': 'date'}),
         }

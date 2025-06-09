@@ -1,30 +1,30 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="animal-detail-grid">
-        <img class="animal-detail-picture" src="{{ animal.picture_url}}">
-        <div class="animal-detail-text">
-            <p><strong>Nombre:</strong> {{ animal.name }}</p>
-            <p><strong>Descripción:</strong></p>
-            <p>{{ animal.description }}</p>
-            <p><strong>Fecha en que se encontró:</strong> {{ animal.date_found }}</p>
-            <p><strong>Lugar en que se encontró:</strong> {{ animal.place_found }}</p>
-            {% if animal.date_adoption == None %}
-                <p><strong>Adoptado:</strong> No</p>
-            {% else %}
-                <p><strong>Adoptado:</strong> {{ animal.date_adoption }}</p>
-                <p><strong>Dueño:</strong> {{ animal.owner }}</p>
-            {% endif %}
-        </div>
-        <div class=animal-detail-buttons>
-            <button class="button-margin" onclick="location.href = '/adopt/{{animal.id}}'">
-                Adoptar
-            </button>
-            <button class="button-margin" onclick="location.href = '/delete_animal/{{animal.id}}'">
-                Eliminar
-            </button>
-            <button class="button-margin" onclick="location.href = '/update_animal/{{animal.id}}'">
-                Editar
-            </button>
-        </div>
+<div class="animal-detail-grid">
+    <img class="animal-detail-picture" src="{{ animal.picture_url}}">
+    <div class="animal-detail-text">
+        <p><strong>Nombre:</strong> {{ animal.name }}</p>
+        <p><strong>Descripción:</strong></p>
+        <p>{{ animal.description }}</p>
+        <p><strong>Fecha en que se encontró:</strong> {{ animal.date_found }}</p>
+        <p><strong>Lugar en que se encontró:</strong> {{ animal.place_found }}</p>
+        {% if animal.date_adoption == None %}
+        <p><strong>Adoptado:</strong> No</p>
+        {% else %}
+        <p><strong>Adoptado:</strong> {{ animal.date_adoption }}</p>
+        <p><strong>Dueño:</strong> {{ animal.owner }}</p>
+        {% endif %}
     </div>
+    <div class=animal-detail-buttons>
+        <button class="button-margin" onclick="location.href = '/adopt/{{animal.id}}'">
+            Adoptar
+        </button>
+        <button class="button-margin" onclick="location.href = '/delete_animal/{{animal.id}}'">
+            Eliminar
+        </button>
+        <button class="button-margin" onclick="location.href = '/update_animal/{{animal.id}}'">
+            Editar
+        </button>
+    </div>
+</div>
 {% endblock %}

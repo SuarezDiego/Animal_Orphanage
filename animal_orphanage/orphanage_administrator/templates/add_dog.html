@@ -1,39 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
-    <form method="post" class="form-grid">
-        {% csrf_token %}
-        <div class="form-item">
-            <label class="form-label" for="{{ form.name.id_for_label }}">Nombre</label>
-        </div>
-        <div class="form-item">
-                {{ form.name }}
-        </div>
-        <div class="form-item">
-            <label class="form-label" for="{{ form.description.id_for_label }}">Descripción</label>
-        </div>
-        <div class="form-item">
-                {{ form.description }}
-        </div>
-        <div class="form-item">
-            <label class="form-label" for="{{ form.picture_url.id_for_label }}">URL de imagen</label>
-        </div>
-        <div class="form-item">
-                {{ form.picture_url }}
-        </div>
-        <div class="form-item">
-            <label class="form-label" for="{{ form.place_found.id_for_label }}">Lugar en que se encontró</label>
-        </div>
-        <div class="form-item">
-                {{ form.place_found }}
-        </div>
-        <div class="form-item">
-            <label class="form-label" for="{{ form.date_found.id_for_label }}">Fecha en que se encontró</label>
-        </div>
-        <div class="form-item">
-                {{ form.date_found }}
-        </div>
-        <div class="wrapper-submit-button">
-            <input type="submit" value="Agregar">
-        </div>
-    </form>
+<form method="post" class="form-grid">
+    {% csrf_token %}
+    <div class="form-item">
+        <label class="form-label" for="{{ form.name.id_for_label }}">Nombre</label>
+    </div>
+    <div class="form-item">
+        {{ form.name }}
+    </div>
+    <div class="form-item">
+        <label class="form-label" for="{{ form.description.id_for_label }}">Descripción</label>
+    </div>
+    <div class="form-item">
+        {{ form.description }}
+    </div>
+    <div class="form-item">
+        <label class="form-label" for="{{ form.picture_url.id_for_label }}">URL de imagen</label>
+    </div>
+    <div class="form-item">
+        {{ form.picture_url }}
+    </div>
+    <div class="form-item">
+        <label class="form-label" for="{{ form.place_found.id_for_label }}">Lugar en que se encontró</label>
+    </div>
+    <div class="form-item">
+        {{ form.place_found }}
+    </div>
+    <div class="form-item">
+        <label class="form-label" for="{{ form.date_found.id_for_label }}">Fecha en que se encontró</label>
+    </div>
+    <div class="form-item">
+        {{ form.date_found }}
+    </div>
+    <div class="wrapper-submit-button">
+        <input type="submit" value="Agregar">
+    </div>
+</form>
 {% endblock %}
